@@ -1,0 +1,138 @@
+html * {
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body
+{
+    background-color: rgb(230,230,230);
+}
+
+table {
+    
+    border-collapse: collapse;
+  }
+
+button {
+
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: rgb(150,150,150);
+    padding: 3px 6px 3px 6px;
+    margin: 3px;
+    box-shadow:  2px 2px 5px rgb(200, 200, 200);
+
+}
+
+button:hover {
+    background-color: rgb(207, 248, 255);
+    border-color: rgb(10, 0, 151);
+
+    box-shadow:  2px 2px 5px rgb(210, 241, 255);
+
+}
+  
+input[type=text], input[type=date], input[type=password], input[type=number], textarea, select {
+    /*box-shadow: 0px 2px 3px 1px black;*/
+    border-radius: 3px;
+    border: 1px solid transparent;
+    padding: 2px;
+    box-shadow:  inset 2px 2px   2px  0px rgb(200, 200, 200), 2px 2px 5px rgb(200, 200, 200);
+}
+
+input[type=text]:focus, input[type=date]:focus, input[type=password]:focus, input[type=number]:focus, textarea:focus, select:focus{
+    /*box-shadow:  inset 2px 2px   2px  0px rgb(200, 200, 200), 2px 2px 5px rgb(151, 236, 251);*/
+    
+    border: 1px solid skyblue;
+
+
+}
+  
+table, th, td {
+    padding-top: 1px;
+    padding-right: 8px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    text-align: left;
+    border: 1px solid black;
+  }
+
+.row_action_link {
+    display: block;
+}
+
+.tr1{
+    background-color: #ffffcc;
+}
+
+.tr2{
+    background-color: #ffff88;
+}
+
+.form_error{
+    color: #ff1111;
+}
+
+.form_required{
+    color: #ff1111;
+}
+
+.form_warper{
+    width: 500px;
+    margin: auto;
+    /* background-color: #ffffee; */
+    background-color: #ffffff;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+
+    margin-bottom: 5px;
+
+    box-shadow:  4px 4px 10px 2px rgb(200, 200, 200);
+
+    /*border-top:   1px solid #ffffff;*/
+    /*border-bottom:   1px solid rgb(255, 255, 121); */ 
+}
+
+.form_no_spacing
+{
+    margin-bottom: 1px;
+}
+
+.table_warper{
+    margin: auto;
+    box-shadow:  4px 4px 10px 2px rgb(200, 200, 200);
+}
+
+.form_border_init{
+    transition: border-left 0.5s;
+    border-left: 5px solid grey;    
+}
+
+.form_border_neutral{
+    border-left: 5px solid white;    
+}
+
+.form_border_changed{
+    transition: border-left 0.5s;
+    border-left: 5px solid rgb(240, 190, 0);    
+}
+
+.form_border_error{
+    transition: border-left 0.5s;
+    border-left: 5px solid red;    
+}
+
+.cell_img {
+    max-width:100%;
+    height:auto;
+}
+
+.cell_imgcontainer {
+    width: 250px; 
+    
+    /*height: 200px;*/
+}
+
+
