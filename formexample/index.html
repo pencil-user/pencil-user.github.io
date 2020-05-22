@@ -1,0 +1,101 @@
+<!--
+// Dušan Benašić test
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+
+<link rel="stylesheet" href="css/main_style.css">
+<script src="javascript/jquery-3.4.1.min.js"></script>
+<script src="javascript/util.js"></script>
+<script src="javascript/crud2.js"></script>
+<script src="javascript/crud3.js"></script>
+
+<script>
+    let rootURL=""
+    let testform_data =    {
+        "type" : "form",
+        "title" : "Test",
+        "elements" :
+        {
+            "name":
+            {
+                "label" : "Name",
+                "type"  : "text",
+                "id"    : "name",
+                "placeholder" : "Your name",
+                "required" : true
+            },
+
+            "surename" :
+            {
+                "label" : "Surename",
+                "type"  : "text",
+                "id"    : "surename",
+                "placeholder" : "Your surename",                 
+                "required" : true
+            },
+
+            "gender" :
+            {
+                "label" : "Gender",
+                "type"  : "radio",
+                "id"    : "gender",
+                "options" : [{"value":"male", "label":"Male"}, {"value":"female", "label":"Female"} , {"value":"other", "label":"Other"} ],
+                "required" : true
+
+            },
+
+            "bio" :
+            {
+                "label" : "Biography",
+                "type"  : "textarea",
+                "id"    : "bio",
+                "value" : "If you change any value, left margin will be yellow. \n\nIf you change it back, it will go back to gray."
+
+            },            
+            
+        },
+
+        "resource_id": "test_id",
+        "resource": "test"        
+    }
+
+    $( document ).ready(function() {
+        let x = new formController(testform_data,"#main_content_a","prefixa");
+        x.init({action:"post"})
+        //x.render()
+        
+    });
+</script>
+
+</head>
+<body>
+
+<h1>Ajax Form test</h1>
+
+<h3>first test</h3>
+
+
+<div id="menu"></div>
+
+<div id="info"></div>
+
+<div id="info" class="form_warper" > 
+    Basic dynamic form example <br> <br>
+    Form is dynamically created from JSON data that could be sent from server. Uses AJAX methods to submit data using POST, PUT or PATCH methods. Could be utilized as a client for REST services. Only altered elements are submitted.
+
+</div>
+
+<br>
+
+<div id="main_content_a"></div>
+
+
+
+</body>
