@@ -384,6 +384,7 @@ let component_types =
                 if( ("selected" in option || "checked" in option) || this.value == option.value)
                 {
                     properties.checked = "checked"
+                    this.value = option.value
                 }
 
                 $elements.append(
@@ -404,12 +405,12 @@ let component_types =
 
         setValue: function(value)
         {   
-            if(this.Value != value)
+            if(this.value != value)
             {
                 
                 $('[name="'+this.idprefix+this.id+'"]').removeAttr('checked');
                 $("input[name=mygroup][value=" + value + "]").prop('checked', true);
-                this.Value = value
+                this.value = value
 
                 for(let o in this.options)
                 {
@@ -607,6 +608,7 @@ let component_types =
                 if(("selected" in option || "checked" in option) || this.value == option.value)
                 {
                     properties.selected = "selected"
+                    this.value = option.value
                 }
 
                 $element.append( $("<option/>", properties).text(option.label) )
@@ -615,7 +617,7 @@ let component_types =
 
             this.$elem = this.wrapElements($element, this.elementID);
 
-            $form.append(this.$elem)
+            this.$form.append(this.$elem)
 
             this.addEvents();
         }, 
@@ -834,6 +836,8 @@ function formController(data, rootElem,  idprefix)
                 {
                     ok = false
                     console.log("error!" + err)
+                    $("#main_msg").empty();
+                    $("#main_msg").append( $('<div>', {class: 'error_msg'}).text("There were errors"));
                 }
             //}
         } 
@@ -847,6 +851,8 @@ function formController(data, rootElem,  idprefix)
             if(this.action == "post")
             {
                 console.log("POST POST POST")
+                $("#main_msg").empty();
+                $("#main_msg").append( $('<div>', {class: 'info_msg'}).text("Form sent"));
 
                 /*$.ajax({
                     url: rootURL+'?resource='+this.data.resource,
@@ -893,3 +899,4 @@ function formController(data, rootElem,  idprefix)
 
 
 }
+
