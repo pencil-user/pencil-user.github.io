@@ -44,9 +44,9 @@
             "gender" :
             {
                 "label" : "Gender",
-                "type"  : "radio",
+                "type"  : "select",
                 "id"    : "gender",
-                "options" : [{"value":"male", "label":"Male"}, {"value":"female", "label":"Female"} , {"value":"other", "label":"Other"} ],
+                "options" : [{"value":"male", "label":"Male" }, {"value":"female", "label":"Female"} , {"value":"other", "label":"Other", "selected":true} ],
                 "required" : true
 
             },
@@ -84,13 +84,15 @@
 
 <div id="menu"></div>
 
-<div id="info"></div>
 
-<div id="info" class="form_warper" > 
+<div id="info2" class="form_warper" > 
     Basic dynamic form example <br> <br>
     Form is dynamically created from JSON data that could be sent from server. Uses AJAX methods to submit data using POST, PUT or PATCH methods. Could be utilized as a client for REST services. Only altered elements are submitted.
-
 </div>
+
+<br>
+
+<div id="main_msg" ></div>
 
 <br>
 
